@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConvertUnits">
+
+    <TextView
+        android:id="@+id/txtOriginalNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="original number"
+        app:layout_constraintBottom_toTopOf="@+id/txtOriginalUnit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.774" />
+
+    <TextView
+        android:id="@+id/txtOriginalUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="416dp"
+        android:text="original unit: cm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtDesiredUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="desired unit: m"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtOriginalUnit"
+        app:layout_constraintVertical_bias="0.127" />
+
+    <TextView
+        android:id="@+id/txtConvertedNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="converted number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDesiredUnit"
+        app:layout_constraintVertical_bias="0.177" />
+</androidx.constraintlayout.widget.ConstraintLayout>
