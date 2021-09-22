@@ -3,6 +3,7 @@ package au.edu.unsw.infs3634.covid19tracker;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
@@ -11,7 +12,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
 
 
 
@@ -32,9 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 String originalNumber = editOriginalUnits.getText().toString();
                 //check if user input data
                 if (!originalNumber.isEmpty()) {
-                    System.out.println("entered here");
                     //pass input units
-                   // int originalUnit = Integer.parseInt(units);
                     Intent intent = new Intent(MainActivity.this, ConvertUnits.class);
                     intent.putExtra("originalNumber", originalNumber);
                     //switch screen
