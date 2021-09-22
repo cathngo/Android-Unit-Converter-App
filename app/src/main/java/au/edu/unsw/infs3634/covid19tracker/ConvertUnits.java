@@ -21,7 +21,7 @@ public class ConvertUnits extends AppCompatActivity {
 
         //set original number
         TextView txtOriginalNumber = findViewById(R.id.txtOriginalNumber);
-        txtOriginalNumber.setText("Original Number: " + originalNumber + "cm");
+        txtOriginalNumber.setText(originalNumber + "cm");
 
         //convert original number(cm) to metre
         convertToMetre(originalNumber);
@@ -39,7 +39,8 @@ public class ConvertUnits extends AppCompatActivity {
 
         //set text
         TextView txtConvertedNumber = findViewById(R.id.txtConvertedNumber);
-        txtConvertedNumber.setText("Converted Number: " + res.toString() + "m");
+        //txtConvertedNumber.setText(originalNumber + "cm = " + res.toString() + "m");
+        txtConvertedNumber.setText(res.toString() + "m");
 
     }
 
@@ -53,7 +54,7 @@ public class ConvertUnits extends AppCompatActivity {
 
         //set text
         TextView txtConvertedNumber = findViewById(R.id.txtConvertedNumber);
-        txtConvertedNumber.setText("Converted Number: " + res.toPlainString() + "cm");
+        txtConvertedNumber.setText(res.toPlainString() + "cm");
 
     }
 
