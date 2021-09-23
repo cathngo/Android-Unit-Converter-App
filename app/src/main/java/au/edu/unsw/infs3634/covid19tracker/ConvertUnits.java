@@ -10,6 +10,8 @@ import java.math.BigDecimal;
 
 public class ConvertUnits extends AppCompatActivity {
 
+    private TextView txtOriginalNumber;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,10 +23,26 @@ public class ConvertUnits extends AppCompatActivity {
 
         //set original number
         TextView txtOriginalNumber = findViewById(R.id.txtOriginalNumber);
-        txtOriginalNumber.setText(originalNumber + "cm");
+        TextView txtTo = findViewById(R.id.txtTo);
+        TextView txtFrom = findViewById(R.id.txtFrom);
 
-        //convert original number(cm) to metre
-        convertToMetre(originalNumber);
+
+        //check conversion type
+        String conversion_type = incomingIntent.getStringExtra("conversion");
+        if (conversion_type.equals("cm_to_m")) {
+            //convert original number(cm) to metre
+            txtOriginalNumber.setText(originalNumber + "cm");
+            txtTo.setText("M");
+            txtFrom.setText("CM");
+            convertToMetre(originalNumber);
+        } else {
+            txtTo.setText("CM");
+            txtFrom.setText("M");
+            txtOriginalNumber.setText(originalNumber + "m");
+            convertToCentimetres(originalNumber);
+        }
+
+
 
     }
 
