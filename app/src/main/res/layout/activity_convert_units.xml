@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+ xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,153 +8,157 @@
     android:background="@drawable/bluebackground"
     android:backgroundTint="#80FFFFFF"
     android:backgroundTintMode="src_over"
-    tools:context=".ConvertUnits">
+    tools:context=".ConvertUnits"
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="344dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="64dp"
-        android:background="@drawable/rounded_corner"
-        android:elevation="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.597"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.743" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="2mm"
-        android:fontFamily="@font/montserrat_regular"
-        android:padding="10dp"
-        android:text="From"
-        app:layout_constraintBottom_toTopOf="@+id/txtFrom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.232"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.969" />
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="344dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_corner"
+            android:elevation="1dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView11"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/txtFrom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="236dp"
-        android:elevation="2mm"
-        android:fontFamily="@font/montserrat_light"
-        android:text="CM"
-        android:textSize="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.204"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2mm"
+            android:fontFamily="@font/montserrat_regular"
+            android:padding="10dp"
+            android:text="From"
+            app:layout_constraintBottom_toTopOf="@+id/txtFrom"
+            app:layout_constraintEnd_toEndOf="@+id/txtFrom"
+            app:layout_constraintStart_toStartOf="@+id/txtFrom"
+            app:layout_constraintTop_toTopOf="@+id/textView16" />
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="2mm"
-        android:fontFamily="@font/montserrat_regular"
-        android:padding="10dp"
-        android:text="To"
-        app:layout_constraintBottom_toTopOf="@+id/txtTo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.617"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.969" />
+        <TextView
+            android:id="@+id/txtFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:elevation="2mm"
+            android:fontFamily="@font/montserrat_light"
+            android:text="CM"
+            android:textSize="50dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtTo"
+            app:layout_constraintStart_toStartOf="@+id/textView16" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="12dp"
-        android:elevation="2mm"
-        app:layout_constraintEnd_toStartOf="@+id/txtTo"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toEndOf="@+id/txtFrom"
-        app:layout_constraintTop_toTopOf="@+id/txtTo"
-        app:srcCompat="@drawable/arrow" />
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2mm"
+            android:fontFamily="@font/montserrat_regular"
+            android:padding="10dp"
+            android:text="To"
+            app:layout_constraintBottom_toTopOf="@+id/txtTo"
+            app:layout_constraintEnd_toEndOf="@+id/txtTo"
+            app:layout_constraintStart_toStartOf="@+id/txtTo"
+            app:layout_constraintTop_toTopOf="@+id/textView16" />
 
-    <TextView
-        android:id="@+id/txtTo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="2mm"
-        android:fontFamily="@font/montserrat_light"
-        android:text="M"
-        android:textSize="50dp"
-        app:layout_constraintBottom_toBottomOf="@+id/txtFrom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.782"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtFrom"
-        app:layout_constraintVertical_bias="0.0" />
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="2mm"
+            app:layout_constraintBottom_toBottomOf="@+id/txtTo"
+            app:layout_constraintEnd_toStartOf="@+id/txtTo"
+            app:layout_constraintStart_toEndOf="@+id/txtFrom"
+            app:layout_constraintTop_toTopOf="@+id/txtTo"
+            app:srcCompat="@drawable/arrow" />
 
-    <TextView
-        android:id="@+id/txtOriginalNumber"
-        android:layout_width="342dp"
-        android:layout_height="80dp"
-        android:fontFamily="@font/montserrat_regular"
-        android:gravity="center"
-        android:text="50cm"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView12"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        <TextView
+            android:id="@+id/txtTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="32dp"
+            android:elevation="2mm"
+            android:fontFamily="@font/montserrat_light"
+            android:text="M"
+            android:textSize="50dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView16"
+            app:layout_constraintEnd_toEndOf="@+id/textView16" />
 
-    <TextView
-        android:id="@+id/txtConvertedNumber"
-        android:layout_width="342dp"
-        android:layout_height="80dp"
-        android:layout_marginBottom="60dp"
-        android:fontFamily="@font/montserrat_regular"
-        android:gravity="center"
-        android:text="0.5m"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/txtOriginalNumber"
+            android:layout_width="342dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center"
+            android:text="50cm"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView16"
+            app:layout_constraintStart_toStartOf="@+id/textView16"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:fontFamily="@font/montserrat_regular"
-        android:text="Conversion:"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.121"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFrom" />
+        <TextView
+            android:id="@+id/txtConvertedNumber"
+            android:layout_width="342dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="172dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center"
+            android:text="0.5m"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/txtOriginalNumber"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txtOriginalNumber" />
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
-        android:fontFamily="@font/montserrat_regular"
-        android:text="="
-        android:textSize="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtConvertedNumber"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Conversion:"
+            app:layout_constraintBottom_toTopOf="@+id/txtOriginalNumber"
+            app:layout_constraintEnd_toEndOf="@+id/textView16"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView16"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="212dp"
-        android:layout_height="122dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView16"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/sublogo" />
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="="
+            android:textSize="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtConvertedNumber"
+            app:layout_constraintEnd_toEndOf="@+id/txtOriginalNumber"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="@+id/txtOriginalNumber"
+            app:layout_constraintTop_toBottomOf="@+id/txtOriginalNumber"
+            app:layout_constraintVertical_bias="0.083" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="316dp"
+            android:layout_height="126dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.545"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/sublogo" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
