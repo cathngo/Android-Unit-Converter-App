@@ -125,6 +125,7 @@
 
         <Spinner
             android:id="@+id/spinnerConvert"
+            android:clickable="false"
             android:layout_width="110dp"
             android:layout_height="19dp"
             app:layout_constraintBottom_toBottomOf="@+id/conversion_type"
