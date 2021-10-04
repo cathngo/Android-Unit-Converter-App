@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Covid19Tracker">
         <activity
+            android:name=".RandomConversion"
+            android:exported="true" />
+        <activity
+            android:name=".SelectConversion"
+            android:exported="true" />
+        <activity
             android:name=".ConvertUnits"
             android:exported="true" />
         <activity

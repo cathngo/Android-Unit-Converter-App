@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bluebackground"
+    android:backgroundTint="#80FFFFFF"
+    android:backgroundTintMode="src_over"
+    tools:context=".SelectConversion"
+    android:fillViewport="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnConvert1"
+            android:layout_width="113dp"
+            android:layout_height="65dp"
+            android:backgroundTint="#fdf3ee"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="CONVERT"
+            android:textColor="#000000"
+            android:textSize="14dp"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/editOriginalUnits1"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="@+id/editOriginalUnits1"
+            app:layout_constraintTop_toBottomOf="@+id/editOriginalUnits1"
+            app:layout_constraintVertical_bias="0.103" />
+
+        <TextView
+            android:id="@+id/txtPrompt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Enter units in cm to convert:"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/txtRightUnit1"
+            app:layout_constraintHorizontal_bias="0.474"
+            app:layout_constraintStart_toStartOf="@+id/txtLeftUnit1"
+            app:layout_constraintTop_toBottomOf="@+id/txtRightUnit1" />
+
+        <TextView
+            android:id="@+id/conversion_type1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Select conversion type:"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtLeftUnit1"
+            app:layout_constraintStart_toStartOf="@+id/imageView1"
+            app:layout_constraintTop_toBottomOf="@+id/imageView1"
+            app:layout_constraintVertical_bias="0.358" />
+
+        <EditText
+            android:id="@+id/editOriginalUnits1"
+            android:layout_width="240dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:fontFamily="@font/montserrat_light"
+            android:gravity="center"
+            android:hint="50 "
+            android:inputType="numberDecimal"
+            android:textSize="45dp"
+            app:layout_constraintEnd_toEndOf="@+id/txtRightUnit1"
+            app:layout_constraintHorizontal_bias="0.458"
+            app:layout_constraintStart_toStartOf="@+id/txtLeftUnit1"
+            app:layout_constraintTop_toBottomOf="@+id/txtPrompt1" />
+
+        <TextView
+            android:id="@+id/txtLeftUnit1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/montserratalternates_light"
+            android:text="CM "
+            android:textSize="50dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtRightUnit1"
+            app:layout_constraintStart_toStartOf="@+id/conversion_type1" />
+
+        <TextView
+            android:id="@+id/txtRightUnit1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/montserratalternates_light"
+            android:text="M"
+            android:textSize="50dp"
+            app:layout_constraintEnd_toEndOf="@+id/spinnerConvert1"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerConvert1" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="316dp"
+            android:layout_height="118dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/conversion_type1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/sublogo" />
+
+        <Spinner
+            android:id="@+id/spinnerConvert1"
+            android:layout_width="110dp"
+            android:layout_height="19dp"
+            android:clickable="false"
+            app:layout_constraintBottom_toBottomOf="@+id/conversion_type1"
+            app:layout_constraintEnd_toEndOf="@+id/imageView1"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/conversion_type1"
+            app:layout_constraintTop_toTopOf="@+id/conversion_type1"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="37dp"
+            android:layout_height="38dp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtLeftUnit1"
+            app:layout_constraintEnd_toStartOf="@+id/txtRightUnit1"
+            app:layout_constraintHorizontal_bias="0.412"
+            app:layout_constraintStart_toEndOf="@+id/txtLeftUnit1"
+            app:layout_constraintTop_toBottomOf="@+id/conversion_type1"
+            app:layout_constraintVertical_bias="0.8"
+            app:srcCompat="@drawable/repeatlight" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

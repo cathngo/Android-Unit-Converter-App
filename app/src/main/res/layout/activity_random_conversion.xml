@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bluebackground"
+    android:backgroundTint="#80FFFFFF"
+    android:backgroundTintMode="src_over"
+    tools:context=".RandomConversion"
+    android:fillViewport="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnConvert2"
+            android:layout_width="122dp"
+            android:layout_height="64dp"
+            android:backgroundTint="#fdf3ee"
+            android:fontFamily="@font/montserrat_light"
+            android:text="CONVERT"
+            android:textColor="#000000"
+            android:textSize="14dp"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/editOriginalUnits2"
+            app:layout_constraintHorizontal_bias="0.423"
+            app:layout_constraintStart_toStartOf="@+id/editOriginalUnits2"
+            app:layout_constraintTop_toBottomOf="@+id/editOriginalUnits2"
+            app:layout_constraintVertical_bias="0.125" />
+
+        <TextView
+            android:id="@+id/txtPrompt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Enter units in cm to convert:"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/txtRightUnit2"
+            app:layout_constraintHorizontal_bias="0.474"
+            app:layout_constraintStart_toStartOf="@+id/txtLeftUnit2"
+            app:layout_constraintTop_toBottomOf="@+id/txtRightUnit2" />
+
+        <TextView
+            android:id="@+id/conversion_type2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Randomised conversion type:"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/logo"
+            app:layout_constraintStart_toStartOf="@+id/logo"
+            app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+        <EditText
+            android:id="@+id/editOriginalUnits2"
+            android:layout_width="240dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:fontFamily="@font/montserrat_light"
+            android:gravity="center"
+            android:hint="50 "
+            android:inputType="numberDecimal"
+            android:textSize="45dp"
+            app:layout_constraintEnd_toEndOf="@+id/txtRightUnit2"
+            app:layout_constraintHorizontal_bias="0.605"
+            app:layout_constraintStart_toStartOf="@+id/txtLeftUnit2"
+            app:layout_constraintTop_toBottomOf="@+id/txtPrompt2" />
+
+        <TextView
+            android:id="@+id/txtLeftUnit2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserratalternates_light"
+            android:text="CM "
+            android:textSize="50dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtRightUnit2"
+            app:layout_constraintStart_toStartOf="@+id/logo" />
+
+        <TextView
+            android:id="@+id/txtRightUnit2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserratalternates_light"
+            android:text="M"
+            android:textSize="50dp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtLeftUnit2"
+            app:layout_constraintEnd_toEndOf="@+id/logo"
+            app:layout_constraintTop_toBottomOf="@+id/conversion_type2" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="316dp"
+            android:layout_height="118dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/sublogo" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtLeftUnit2"
+            app:layout_constraintEnd_toStartOf="@+id/txtRightUnit2"
+            app:layout_constraintHorizontal_bias="0.455"
+            app:layout_constraintStart_toEndOf="@+id/txtLeftUnit2"
+            app:layout_constraintTop_toBottomOf="@+id/conversion_type2"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/repeatlight" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

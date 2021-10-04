@@ -16,148 +16,203 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/textView16"
-            android:layout_width="344dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/rounded_corner"
-            android:elevation="1dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView11"
-            app:layout_constraintEnd_toEndOf="@+id/imageView5"
-            app:layout_constraintStart_toStartOf="@+id/imageView5"
-            app:layout_constraintTop_toBottomOf="@+id/imageView5"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:elevation="2mm"
             android:fontFamily="@font/montserrat_regular"
-            android:padding="10dp"
-            android:text="From"
-            app:layout_constraintBottom_toTopOf="@+id/txtFrom"
-            app:layout_constraintEnd_toEndOf="@+id/txtFrom"
-            app:layout_constraintStart_toStartOf="@+id/txtFrom"
-            app:layout_constraintTop_toTopOf="@+id/textView16" />
+            android:padding="8dp"
+            android:text="Original Number: "
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.136"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
         <TextView
             android:id="@+id/txtFrom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
+            android:layout_marginTop="4dp"
             android:elevation="2mm"
-            android:fontFamily="@font/montserrat_light"
-            android:text="CM"
-            android:textSize="50dp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/txtTo"
-            app:layout_constraintStart_toStartOf="@+id/textView16" />
+            android:fontFamily="@font/montserrat_regular"
+            android:padding="8dp"
+            android:text="Desired Unit: "
+            android:textSize="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView10"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
         <TextView
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:elevation="2mm"
             android:fontFamily="@font/montserrat_regular"
-            android:padding="10dp"
-            android:text="To"
-            app:layout_constraintBottom_toTopOf="@+id/txtTo"
-            app:layout_constraintEnd_toEndOf="@+id/txtTo"
-            app:layout_constraintStart_toStartOf="@+id/txtTo"
-            app:layout_constraintTop_toTopOf="@+id/textView16" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="60dp"
-            android:layout_height="50dp"
-            android:layout_marginBottom="8dp"
-            android:elevation="2mm"
-            app:layout_constraintBottom_toBottomOf="@+id/txtTo"
-            app:layout_constraintEnd_toStartOf="@+id/txtTo"
-            app:layout_constraintStart_toEndOf="@+id/txtFrom"
-            app:layout_constraintTop_toTopOf="@+id/txtTo"
-            app:srcCompat="@drawable/arrow" />
+            android:padding="8dp"
+            android:text="Original Unit:"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
         <TextView
             android:id="@+id/txtTo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="35dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginTop="4dp"
             android:elevation="2mm"
-            android:fontFamily="@font/montserrat_light"
-            android:text="M"
-            android:textSize="50dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView16"
-            app:layout_constraintEnd_toEndOf="@+id/textView16" />
+            android:fontFamily="@font/montserrat_regular"
+            android:padding="8dp"
+            android:text="Converted Number: "
+            android:textSize="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txtFrom"
+            app:layout_constraintTop_toBottomOf="@+id/txtFrom" />
 
         <TextView
             android:id="@+id/txtOriginalNumber"
-            android:layout_width="342dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="338dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
             android:fontFamily="@font/montserrat_regular"
             android:gravity="center"
             android:text="50cm"
-            android:textSize="30dp"
-            app:layout_constraintEnd_toEndOf="@+id/textView16"
-            app:layout_constraintStart_toStartOf="@+id/textView16"
+            android:textSize="25dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <TextView
             android:id="@+id/txtConvertedNumber"
-            android:layout_width="342dp"
-            android:layout_height="80dp"
-            android:layout_marginBottom="172dp"
+            android:layout_width="346dp"
+            android:layout_height="68dp"
             android:fontFamily="@font/montserrat_regular"
             android:gravity="center"
             android:text="0.5m"
-            android:textSize="30dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="25dp"
             app:layout_constraintEnd_toEndOf="@+id/txtOriginalNumber"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/txtOriginalNumber" />
+            app:layout_constraintStart_toStartOf="@+id/txtOriginalNumber"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
         <TextView
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="24dp"
-            android:fontFamily="@font/montserrat_regular"
-            android:text="Conversion:"
-            app:layout_constraintBottom_toTopOf="@+id/txtOriginalNumber"
-            app:layout_constraintEnd_toEndOf="@+id/textView16"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/montserratalternates_bold"
+            android:padding="8dp"
+            android:text="Summary:"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/textView16"
-            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+            app:layout_constraintStart_toStartOf="@+id/txtFrom"
+            app:layout_constraintTop_toBottomOf="@+id/txtTo" />
 
         <TextView
             android:id="@+id/textView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/montserrat_regular"
             android:text="="
+
             android:textSize="40dp"
-            app:layout_constraintBottom_toTopOf="@+id/txtConvertedNumber"
             app:layout_constraintEnd_toEndOf="@+id/txtOriginalNumber"
-            app:layout_constraintHorizontal_bias="0.489"
             app:layout_constraintStart_toStartOf="@+id/txtOriginalNumber"
-            app:layout_constraintTop_toBottomOf="@+id/txtOriginalNumber"
-            app:layout_constraintVertical_bias="0.083" />
+            app:layout_constraintTop_toBottomOf="@+id/txtOriginalNumber" />
 
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="316dp"
-            android:layout_height="126dp"
-            android:layout_marginTop="32dp"
+            android:layout_width="351dp"
+            android:layout_height="115dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="28dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.545"
+            app:layout_constraintHorizontal_bias="0.55"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_gravity="center"
             app:srcCompat="@drawable/sublogo" />
+
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="113dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="#fdf3ee"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="HOME"
+            android:textColor="#000000"
+            android:textSize="12dp"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/txtConvertedNumber"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="@+id/txtConvertedNumber"
+            app:layout_constraintTop_toBottomOf="@+id/txtConvertedNumber"
+            app:layout_constraintVertical_bias="0.155" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="204dp" />
+
+        <TextView
+            android:id="@+id/txtOriginalNumber_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:padding="8dp"
+            android:text="TextView"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+        <TextView
+            android:id="@+id/txtOriginalUnit_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:padding="8dp"
+            android:text="TextView"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView10"
+            app:layout_constraintBottom_toBottomOf="@+id/textView10"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/txtOriginalNumber_c"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/txtDesiredUnit_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:padding="8dp"
+            android:text="TextView"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtFrom"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+        <TextView
+            android:id="@+id/txtConvertedNumber_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:padding="8dp"
+            android:text="TextView"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtTo"
+            app:layout_constraintEnd_toEndOf="@+id/txtDesiredUnit_c"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline2" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

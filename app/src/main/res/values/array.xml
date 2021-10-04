@@ -3,6 +3,16 @@
     <string-array name="conversion_options">
         <item>cm to m</item>
         <item>m to cm</item>
+        <item>cm to mm</item>
+        <item>mm to cm</item>
+        <item>km to m</item>
+        <item>m to km</item>
+        <item>cm to km</item>
+        <item>km to cm</item>
+        <item>m to mm</item>
+        <item>mm to m</item>
+        <item>mm to km</item>
+        <item>km to mm</item>
     </string-array>
 </resources>
    
