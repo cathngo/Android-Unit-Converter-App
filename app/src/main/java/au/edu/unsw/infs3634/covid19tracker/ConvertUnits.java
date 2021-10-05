@@ -20,31 +20,26 @@ public class ConvertUnits extends AppCompatActivity {
     private TextView txtDesiredUnit_c;
     private TextView txtConvertedNumber_c;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_convert_units);
 
-        //get original number
+        //Get the original number that was inputted by user
         Intent incomingIntent = getIntent();
         String originalNumber = incomingIntent.getStringExtra("originalNumber");
 
-        //set original number
-        TextView txtOriginalNumber = findViewById(R.id.txtOriginalNumber);
-
-
+        //Initialise text views
+        txtOriginalNumber = findViewById(R.id.txtOriginalNumber);
         txtOriginalNumber_c = findViewById(R.id.txtOriginalNumber_c);
         txtOriginalUnit_c = findViewById(R.id.txtOriginalUnit_c);
         txtDesiredUnit_c = findViewById(R.id.txtDesiredUnit_c);
-
-
         txtOriginalNumber_c.setText(originalNumber);
 
-
-        //check conversion type
+        //Check conversion type that was selected and call the respective conversion method
         String conversion_type = incomingIntent.getStringExtra("conversion");
         if (conversion_type.equals("cm to m")) {
-            //convert original number(cm) to metre
             txtOriginalNumber.setText(originalNumber + "cm");
             txtOriginalUnit_c.setText("Centimetres");
             txtDesiredUnit_c.setText("Metres");
@@ -106,6 +101,7 @@ public class ConvertUnits extends AppCompatActivity {
             convertKilometresToMillimetres(originalNumber);
         }
 
+        //Initialise a home button to take user back to main screen
         Button btnHome = findViewById(R.id.btnHome);
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,219 +110,175 @@ public class ConvertUnits extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
     }
+
+    //Converts kilometres to millimetres
     public void convertKilometresToMillimetres(String originalNumber) {
         double initialNumber = Double.parseDouble(originalNumber);
 
-        //convert to human math
+        //Convert to big decimal
         BigDecimal bdNumber = BigDecimal.valueOf(initialNumber);
         BigDecimal multiplier = new BigDecimal(1000000);
         BigDecimal res = bdNumber.multiply(multiplier).stripTrailingZeros();
 
-        //set text
+        //Set textviews
         TextView txtConvertedNumber = findViewById(R.id.txtConvertedNumber);
         txtConvertedNumber.setText(res.toPlainString() + "mm");
-
         txtConvertedNumber_c = findViewById(R.id.txtConvertedNumber_c);
         txtConvertedNumber_c.setText(res.toPlainString());
-
     }
+
+    //Converts millimetres to kilometres
     public void convertMillimetresToKilometres(String originalNumber){
         double initialNumber = Double.parseDouble(originalNumber);
-        //double convertedNumber = (double) initialNumber /100;
 
-        //convert to human math
         BigDecimal bdNumber = BigDecimal.valueOf(initialNumber);
         BigDecimal divisor = new BigDecimal(1000000);
         BigDecimal res = bdNumber.divide(divisor);
 
-        //set text
         TextView txtConvertedNumber = findViewById(R.id.txtConvertedNumber);
-        //txtConvertedNumber.setText(originalNumber + "cm = " + res.toString() + "m");
         txtConvertedNumber.setText(res.toString() + "km");
-
         txtConvertedNumber_c = findViewById(R.id.txtConvertedNumber_c);
         txtConvertedNumber_c.setText(res.toPlainString());
-
     }
+
+    //Converts millimetres to metres
     public void convertMillimetresToMetres(String originalNumber){
         double initialNumber = Double.parseDouble(originalNumber);
-        //double convertedNumber = (double) initialNumber /100;
 
-        //convert to human math
         BigDecimal bdNumber = BigDecimal.valueOf(initialNumber);
         BigDecimal divisor = new BigDecimal(1000);
         BigDecimal res = bdNumber.divide(divisor);
 
-        //set text
         TextView txtConvertedNumber = findViewById(R.id.txtConvertedNumber);
-        //txtConvertedNumber.setText(originalNumber + "cm = " + res.toString() + "m");
         txtConvertedNumber.setText(res.toString() + "m");
-
         txtConvertedNumber_c = findViewById(R.id.txtConvertedNumber_c);
         txtConvertedNumber_c.setText(res.toPlainString());
-
     }
+    //Converts metres to millimetres
     public void convertMetresToMillimetres(String originalNumber) {
         double initialNumber = Double.parseDouble(originalNumber);
 
-        //convert to human math
         BigDecimal bdNumber = BigDecimal.valueOf(initialNumber);
         BigDecimal multiplier = new BigDecimal(1000);
         BigDecimal res = bdNumber.multiply(multiplier).stripTrailingZeros();
 
-        //set text
         TextView txtConvertedNumber = findViewById(R.id.txtConvertedNumber);
         txtConvertedNumber.setText(res.toPlainString() + "mm");
-
         txtConvertedNumber_c = findViewById(R.id.txtConvertedNumber_c);
         txtConvertedNumber_c.setText(res.toPlainString());
-
     }
+
+    //Converts centimetres to kilometres
     public void convertCentimetresToKilometres(String originalNumber){
         double initialNumber = Double.parseDouble(originalNumber);
-        //double convertedNumber = (double) initialNumber /100;
 
-        //convert to human math
         BigDecimal bdNumber = BigDecimal.valueOf(initialNumber);
         BigDecimal divisor = new BigDecimal(100000);
         BigDecimal res = bdNumber.divide(divisor);
 
-        //set text
         TextView txtConvertedNumber = findViewById(R.id.txtConvertedNumber);
-        //txtConvertedNumber.setText(originalNumber + "cm = " + res.toString() + "m");
         txtConvertedNumber.setText(res.toString() + "km");
-
         txtConvertedNumber_c = findViewById(R.id.txtConvertedNumber_c);
         txtConvertedNumber_c.setText(res.toPlainString());
-
     }
 
+    //Converts kilometres to centimetres
     public void convertKilometresToCentimetres(String originalNumber) {
         double initialNumber = Double.parseDouble(originalNumber);
 
-        //convert to human math
         BigDecimal bdNumber = BigDecimal.valueOf(initialNumber);
         BigDecimal multiplier = new BigDecimal(100000);
         BigDecimal res = bdNumber.multiply(multiplier).stripTrailingZeros();
 
-        //set text
         TextView txtConvertedNumber = findViewById(R.id.txtConvertedNumber);
         txtConvertedNumber.setText(res.toPlainString() + "cm");
-
         txtConvertedNumber_c = findViewById(R.id.txtConvertedNumber_c);
         txtConvertedNumber_c.setText(res.toPlainString());
-
     }
 
+    //Converts metres to kilometres
     public void convertMetresToKilometres(String originalNumber){
         double initialNumber = Double.parseDouble(originalNumber);
-        //double convertedNumber = (double) initialNumber /100;
 
-        //convert to human math
         BigDecimal bdNumber = BigDecimal.valueOf(initialNumber);
         BigDecimal divisor = new BigDecimal(1000);
         BigDecimal res = bdNumber.divide(divisor);
 
-        //set text
         TextView txtConvertedNumber = findViewById(R.id.txtConvertedNumber);
-        //txtConvertedNumber.setText(originalNumber + "cm = " + res.toString() + "m");
         txtConvertedNumber.setText(res.toString() + "km");
 
         txtConvertedNumber_c = findViewById(R.id.txtConvertedNumber_c);
         txtConvertedNumber_c.setText(res.toPlainString());
-
     }
 
-
+    //Converts kilometres to metres
     public void convertKilometresToMetres(String originalNumber) {
         double initialNumber = Double.parseDouble(originalNumber);
 
-        //convert to human math
         BigDecimal bdNumber = BigDecimal.valueOf(initialNumber);
         BigDecimal multiplier = new BigDecimal(1000);
         BigDecimal res = bdNumber.multiply(multiplier).stripTrailingZeros();
 
-        //set text
         TextView txtConvertedNumber = findViewById(R.id.txtConvertedNumber);
         txtConvertedNumber.setText(res.toPlainString() + "m");
-
         txtConvertedNumber_c = findViewById(R.id.txtConvertedNumber_c);
         txtConvertedNumber_c.setText(res.toPlainString());
-
     }
 
+    //Converts centimetres to metres
     public void convertCentimetresToMetre(String originalNumber){
         double initialNumber = Double.parseDouble(originalNumber);
-        //double convertedNumber = (double) initialNumber /100;
 
-        //convert to human math
         BigDecimal bdNumber = BigDecimal.valueOf(initialNumber);
         BigDecimal divisor = new BigDecimal(100);
         BigDecimal res = bdNumber.divide(divisor);
 
-        //set text
         TextView txtConvertedNumber = findViewById(R.id.txtConvertedNumber);
-        //txtConvertedNumber.setText(originalNumber + "cm = " + res.toString() + "m");
         txtConvertedNumber.setText(res.toString() + "m");
-
         txtConvertedNumber_c = findViewById(R.id.txtConvertedNumber_c);
         txtConvertedNumber_c.setText(res.toPlainString());
-
     }
 
+    // Converts metres to centimetres
     public void convertMetresToCentimetres(String originalNumber) {
         double initialNumber = Double.parseDouble(originalNumber);
 
-        //convert to human math
         BigDecimal bdNumber = BigDecimal.valueOf(initialNumber);
         BigDecimal multiplier = new BigDecimal(100);
         BigDecimal res = bdNumber.multiply(multiplier).stripTrailingZeros();
 
-        //set text
         TextView txtConvertedNumber = findViewById(R.id.txtConvertedNumber);
         txtConvertedNumber.setText(res.toPlainString() + "cm");
-
         txtConvertedNumber_c = findViewById(R.id.txtConvertedNumber_c);
         txtConvertedNumber_c.setText(res.toPlainString());
-
     }
 
+    //Converts centimetres to millimetres
     public void convertCentimetresToMillimetres(String originalNumber) {
         double initialNumber = Double.parseDouble(originalNumber);
 
-        //convert to human math
         BigDecimal bdNumber = BigDecimal.valueOf(initialNumber);
         BigDecimal multiplier = new BigDecimal(10);
         BigDecimal res = bdNumber.multiply(multiplier).stripTrailingZeros();
 
-        //set text
         TextView txtConvertedNumber = findViewById(R.id.txtConvertedNumber);
         txtConvertedNumber.setText(res.toPlainString() + "mm");
         txtConvertedNumber_c = findViewById(R.id.txtConvertedNumber_c);
         txtConvertedNumber_c.setText(res.toPlainString());
-
     }
 
+    //Converts millimetres to centimetres
     public void convertMillimetresToCentimetres(String originalNumber) {
         double initialNumber = Double.parseDouble(originalNumber);
 
-        //convert to human math
         BigDecimal bdNumber = BigDecimal.valueOf(initialNumber);
         BigDecimal divisor = new BigDecimal(10);
         BigDecimal res = bdNumber.divide(divisor);
 
-        //set text
         TextView txtConvertedNumber = findViewById(R.id.txtConvertedNumber);
-        //txtConvertedNumber.setText(originalNumber + "cm = " + res.toString() + "m");
         txtConvertedNumber.setText(res.toString() + "cm");
-
         txtConvertedNumber_c = findViewById(R.id.txtConvertedNumber_c);
         txtConvertedNumber_c.setText(res.toPlainString());
-
     }
-
-
 }

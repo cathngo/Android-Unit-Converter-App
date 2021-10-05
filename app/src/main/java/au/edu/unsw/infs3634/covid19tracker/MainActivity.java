@@ -24,11 +24,11 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-        //button select
+        //Instantiate select conversion button
         btnSelectConversion = findViewById(R.id.btnSelectConversion);
         btnSelectConversion.setOnClickListener(new View.OnClickListener() {
+
+            //Switch screens to select conversion activity when clicked
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, SelectConversion.class);
@@ -36,9 +36,11 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
-        //button random
+        //Instantiate random conversion button
         btnRandom = findViewById(R.id.btnRandom);
         btnRandom.setOnClickListener(new View.OnClickListener() {
+
+            //Switch screens to random conversion activity when clicked
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, RandomConversion.class);

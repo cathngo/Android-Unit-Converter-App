@@ -21,16 +21,16 @@
             android:id="@+id/btnSelectConversion"
             android:layout_width="285dp"
             android:layout_height="62dp"
-            android:backgroundTint="#e6f2f6"
+            android:backgroundTint="#e4dbd6"
             android:fontFamily="@font/montserrat_semibold"
             android:text="I want to select a conversion"
             android:textColor="#000000"
             android:textSize="10dp"
             app:cornerRadius="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/imageView3"
-            app:layout_constraintHorizontal_bias="0.535"
-            app:layout_constraintStart_toStartOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnRandom"
             app:layout_constraintVertical_bias="0.111" />
 
@@ -45,9 +45,9 @@
             android:textColor="#000000"
             android:textSize="10dp"
             app:cornerRadius="20dp"
-            app:layout_constraintEnd_toEndOf="@+id/imageView3"
-            app:layout_constraintHorizontal_bias="0.535"
-            app:layout_constraintStart_toStartOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <TextView
@@ -57,9 +57,9 @@
             android:layout_marginTop="12dp"
             android:fontFamily="@font/montserrat_black"
             android:text="Welcome to Convert"
-            app:layout_constraintEnd_toEndOf="@+id/imageView3"
-            app:layout_constraintHorizontal_bias="0.451"
-            app:layout_constraintStart_toStartOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
         <ImageView
@@ -68,6 +68,7 @@
             android:layout_height="306dp"
             android:layout_marginTop="60dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/thinking" />
@@ -80,9 +81,9 @@
             android:fontFamily="@font/montserrat_semibold"
             android:gravity="center"
             android:text="A unit conversion application made to simplify your conversion needs"
-            app:layout_constraintEnd_toEndOf="@+id/textView"
-            app:layout_constraintHorizontal_bias="0.427"
-            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <TextView
@@ -92,8 +93,9 @@
             android:layout_marginTop="20dp"
             android:fontFamily="@font/montserrat_regular"
             android:text="Please select an option:"
-            app:layout_constraintEnd_toEndOf="@+id/textView2"
-            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 

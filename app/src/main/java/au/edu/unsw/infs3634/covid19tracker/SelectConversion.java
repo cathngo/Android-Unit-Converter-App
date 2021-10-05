@@ -23,10 +23,10 @@ public class SelectConversion extends AppCompatActivity implements AdapterView.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_conversion);
 
-        //get units entered
+        //Get user input for units to be converted
         EditText editOriginalUnits = findViewById(R.id.editOriginalUnits1);
 
-        //check drop down menu
+        //Instantiate drop down menu for selection
         Spinner conversion = findViewById(R.id.spinnerConvert1);
         String[] conversion_types = getResources().getStringArray(R.array.conversion_options);
         ArrayAdapter adapter = new ArrayAdapter(SelectConversion.this,
@@ -35,29 +35,31 @@ public class SelectConversion extends AppCompatActivity implements AdapterView.O
         conversion.setAdapter(adapter);
         conversion.setOnItemSelectedListener(SelectConversion.this);
 
-        //convert button onclick
+        //Instantiate convert button and switch to convert activity when clicked
         Button btnConvert = findViewById(R.id.btnConvert1);
         btnConvert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String originalNumber = editOriginalUnits.getText().toString();
-                //check if user input data
+                //Check that the user inputted data
                 if (!originalNumber.isEmpty()) {
-                    //pass input units
+                    //Pass the original number as an intent extra
                     Intent intent = new Intent(SelectConversion.this, ConvertUnits.class);
                     intent.putExtra("originalNumber", originalNumber);
-                    //check conversion type
+                    //Check the conversion type selected
                     intent.putExtra("conversion", conversion.getSelectedItem().toString());
-                    //switch screen
+                    //Switch screens
                     startActivity(intent);
                 } else {
+                    //Error message
                     Toast.makeText(SelectConversion.this,
-                            "Please input units to be converted", Toast.LENGTH_SHORT).show();
+                            "Please enter a number to convert", Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
 
+    //Change the conversion type depending on option user selects from spinner
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         txtLeftUnit = findViewById(R.id.txtLeftUnit1);

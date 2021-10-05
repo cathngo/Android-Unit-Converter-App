@@ -27,31 +27,30 @@ public class RandomConversion extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_random_conversion);
 
-
-        //generate random number to select conversion type
+        //Generate random number to select conversion type
         Random r = new Random();
         int low = 1;
         int high = 12;
         result = r.nextInt(high-low) + low;
 
-        //set textViews depending on number generated
+        //Set textViews depending on number generated
         setTextViews(result);
 
-        //get units entered
+        //Get the user input for original number
         EditText editOriginalUnits = findViewById(R.id.editOriginalUnits2);
 
-        //convert button onclick
+        //Instantiate convert button and create on click to switch to conversion screen
         Button btnConvert = findViewById(R.id.btnConvert2);
         btnConvert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String originalNumber = editOriginalUnits.getText().toString();
-                //check if user input data
+                //Check if user inputted data
                 if (!originalNumber.isEmpty()) {
-                    //pass input units
+                    //Pass the entered data as intent extra to conversion class
                     Intent intent = new Intent(RandomConversion.this, ConvertUnits.class);
                     intent.putExtra("originalNumber", originalNumber);
-                    //check conversion type
+                    //Check the conversion type that was randomly generated
                     if (result == 1) {
                         intent.putExtra("conversion", "cm to mm");
                     } else if (result == 2){
@@ -77,18 +76,19 @@ public class RandomConversion extends AppCompatActivity{
                     } else if (result == 12) {
                         intent.putExtra("conversion", "km to mm");
                     }
-                    //switch screen
+                    //Switch screens
                     startActivity(intent);
                 } else {
+                    //Error message
                     Toast.makeText(RandomConversion.this,
-                            "Please input units to be converted", Toast.LENGTH_SHORT).show();
+                            "Please enter a number to convert", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
     }
 
-
+    //Change textviews to match the random conversion selected
     public void setTextViews(int result) {
         txtLeftUnit = findViewById(R.id.txtLeftUnit2);
         txtRightUnit = findViewById(R.id.txtRightUnit2);
@@ -143,6 +143,5 @@ public class RandomConversion extends AppCompatActivity{
             txtRightUnit.setText("MM");
             txtPrompt.setText("Enter units in kilometres to convert");
         }
-
     }
 }
